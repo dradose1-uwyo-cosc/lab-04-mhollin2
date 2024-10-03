@@ -1,12 +1,10 @@
-# Your Name Here
+# Margaret Hollingshead
 # UWYO COSC 1010
-# Submission Date
+# 10/3/24
 # Lab 03 
-# Lab Section: 
+# Lab Section: 12
 # Sources, people worked with, help given to: 
-# your
-# comments
-# here
+# I added a rounding function when displaying my final temperature so it would look better while reading. 
 
 
 
@@ -99,7 +97,25 @@ min_temps = [
 # You cannot use any pre-existing functions (like mean()) and must perform the calculations manually.
 # Output the results of both calculations.
 
+total_max = 0
+total_min = 0
+
+for i in range(len(max_temps)):
+    total_max = total_max + max_temps[i]
+    total_min = total_min + min_temps[i]
+average_max = total_max/len(max_temps)
+average_min = total_min/len(min_temps)
+
+
+print(f"The average maximum temperature in Laramie is {round(average_max,1)} degrees Fahrenheit.")
+print(f"The average minimum temperature in Laramie is {round(average_min,1)} degrees Fahrenheit.")
+
+
 # For the next part, determine the highest and lowest recorded temperatures.
 # HINT: You can find this information without using any logic or looping.
 
+max_temps.sort()
+print(f"The highest temperature in Laramie was {max_temps[-1]} degrees Fahrenheit.")
+min_temps.sort()
+print(f"The lowest temperature in Laramie was {min_temps[0]} degrees Fahrenheit.")
 
